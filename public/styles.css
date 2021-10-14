@@ -1,0 +1,233 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+	color: rgb(212, 212, 212);
+	font-size: 1.8rem;
+	background: rgb(26, 27, 28);
+	font-family: 'Roboto', sans-serif;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.bodyCont {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-left: 10px;
+	margin: auto;
+	max-width: 800px;
+}
+
+.mainListCont {
+	display: flex;
+	flex-direction: row;
+}
+
+.listControls {
+	width: 30%;
+	max-height: 50rem;
+}
+
+.controlBtn {
+	width: 95%;
+	color: cornflowerblue;
+	background: rgb(26, 27, 28);
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.listCont {
+	width: 70%;
+	padding-left: 1.5rem;
+}
+
+.addItem {
+	margin-bottom: 0.5rem;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.userInput {
+	background-color: rgb(39, 39, 40);
+	color: rgb(212, 212, 212);
+	width: 90%;
+	padding-left: 2rem;
+}
+
+.status {
+	background: rgb(39, 39, 40);
+	color: rgb(212, 212, 212);
+}
+
+.submitBtn {
+	background: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	color: cornflowerblue;
+	font-size: 4rem;
+	width: 10%;
+}
+
+.submitBtn:active {
+	color: rgb(81, 133, 230);
+}
+
+.controlBtn:hover {
+	cursor: pointer;
+}
+
+.todoList {
+	display: flex;
+	flex-direction: column-reverse;
+	list-style-type: none;
+	margin-top: 0;
+	padding-left: 0;
+	width: 90%;
+}
+
+li {
+	border-bottom: 2px solid rgb(66, 66, 66);
+	padding: 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.todoItem {
+	width: 80%;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+INPUT[type='checkbox']:focus {
+	outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+INPUT[type='checkbox'] {
+	background-color: rgb(212, 212, 212);
+	border-radius: 2px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	position: relative;
+}
+
+INPUT[type='checkbox']:checked {
+	background-color: cornflowerblue;
+	background: cornflowerblue
+		url('data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==')
+		3px 3px no-repeat;
+}
+.fa-trash {
+	font-size: 20px;
+}
+
+.fa-trash:hover {
+	color: cornflowerblue;
+}
+
+.fa-trash:active {
+	color: rgb(81, 133, 230);
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 800px) {
+	/* .bodyCont {
+		padding-right: 10px;
+	} */
+	.todoList {
+		width: 100%;
+		padding-right: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		margin-bottom: 0;
+	}
+
+	.mainListCont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.listControls {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-right: 10px;
+	}
+	.listControls button {
+		width: 100%;
+	}
+	.listCont {
+		padding: 0;
+		width: 100%;
+	}
+	.todoList {
+		width: 100%;
+	}
+}
