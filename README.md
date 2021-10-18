@@ -11,7 +11,6 @@ App is live at
         <li>EJS</li>
         <li>CSS(flexbox)</li>
         <li>MongoDB</li>
-
     </ul>
 
 <p>Users are able to create a todo list. Users may mark tasks complete or incomplete. Additionally they are able to delete tasks either individually, or by whether they are completed, as well as clearing the entire task list.<p/>
