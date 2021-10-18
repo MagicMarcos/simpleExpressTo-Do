@@ -1,6 +1,6 @@
-# I Found My Best Friend
-<p> A tinder inspired web application, for matching prospective adoption seekers in the Boston region, with their future best friends! </p>
-App is live at https://ifoundmybff.herokuapp.com
+# S Task
+<p> A simple full stack todo lis</p>
+App is live at 
 
 <h1>How It's Made:</h1>
 <p>Utilized: </p> 
