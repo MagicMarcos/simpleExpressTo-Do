@@ -13,7 +13,7 @@ var db, collection;
 
 const dbName = 'todo';
 
-app.listen(5000, () => {
+app.listen(7000, () => {
 	MongoClient.connect(
 		url,
 		{ useNewUrlParser: true, useUnifiedTopology: true },
